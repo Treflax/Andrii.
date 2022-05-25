@@ -108,7 +108,7 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 53px;
+    padding-top: 43px;
     margin-bottom: 105px;
 
     .logo {
@@ -169,6 +169,7 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 150px;
     
     .photos {
         display: flex;
@@ -219,6 +220,35 @@ select {
             width: 436px;
             line-height: 30px;
             color: #000000;
+            margin-bottom: 70px;
         }
+
+        .supported {
+            .fa-instagram {
+                font-size: 33px;
+            }
+        }
+    }
+}
+
+// Line and slide down
+
+.crossing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .line {
+        width: 555px;
+        height: 10px;
+        background: #000000;
+        border-radius: 10px;
+    }
+
+    .slide-down {
+        width: 49px;
+        height: 49px;
+        background: #D9D9D9;
+        border: 1px solid #000000;
     }
 }
