@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    color:rgb(0, 0, 0);
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    margin: 0;
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    opacity: 1;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    color: white;
+    background: var(--bag);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+// /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul[class],
+ol[class] {
+    list-style: none;
+    list-style-type: none;
+}
+
+// /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a:not([class]) {
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+}
+
+// /* Упрощаем работу с изображениями */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+// /* Указываем понятную периодичность в потоке данных у article*/
+
+article > * + * {
+    margin-top: 1em;
+}
+
+// /* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+// /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+
+@media (prefers-reduced-motion: reduce) {
+* {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+}
+
+// Container
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+// Header
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 53px;
+    margin-bottom: 105px;
+
+    .logo {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 48px;
+        color: #000000;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #000000;
+
+        .linked {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .linked:not(:first-child) {
+          margin-left: 55px;  
+        }
+
+        .linked::after {
+            content: "";
+            display: block;
+            background-color: #000000;
+            opacity: 0;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            z-index: 10;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            -webkit-transition: 0.3s linear;
+            transition: 0.3s linear;
+            border-radius: 20px;
+        }
+
+        .linked:hover::after {
+            opacity: 1;
+            width: 100%;
+        }
+    }
+}
+
+// Section: Info
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .photos {
+        display: flex;
+
+        img {
+            position: absolute;
+            width: 450px;
+            height: 400px;
+            left: 203px;
+            top: 185.68px;
+            z-index: 10;
+        }
+
+        .shadow {
+            position: absolute;
+            width: 450px;
+            height: 400px;
+            left: 248px;
+            top: 224.68px;
+            background: linear-gradient(180deg, #FFFDD0 0%, rgba(255, 253, 208, 0) 100%);
+            border-radius: 30px;
+        }
+    }
+    
+    .info {
+        .welcome {
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000000;
+            margin-bottom: 12px;
+        }
+
+        .greet{
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 60px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .info__text{
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 20px;
+            width: 436px;
+            line-height: 30px;
+            color: #000000;
+        }
+    }
+}
