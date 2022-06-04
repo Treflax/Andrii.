@@ -6,7 +6,6 @@
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: black;
 }
 
 /* Убираем внутренние отступы */
@@ -102,7 +101,7 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 43px;
+  padding-top: 33px;
   margin-bottom: 105px;
 }
 
@@ -134,6 +133,7 @@ select {
 .header .navigation .linked {
   position: relative;
   text-decoration: none;
+  color: #000000;
 }
 
 .header .navigation .linked:not(:first-child) {
@@ -177,9 +177,7 @@ select {
 }
 
 .main .photos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 
 .main .photos img {
@@ -200,6 +198,10 @@ select {
   background: -webkit-gradient(linear, left top, left bottom, from(#FFFDD0), to(rgba(255, 253, 208, 0)));
   background: linear-gradient(180deg, #FFFDD0 0%, rgba(255, 253, 208, 0) 100%);
   border-radius: 30px;
+}
+
+.main .info {
+  padding: 30px 0;
 }
 
 .main .info .welcome {
@@ -232,6 +234,7 @@ select {
 
 .main .info .supported .fa-instagram {
   font-size: 33px;
+  color: #000000;
 }
 
 .crossing {
@@ -244,18 +247,157 @@ select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 118px;
 }
 
 .crossing .line {
   width: 555px;
-  height: 10px;
+  height: 8px;
   background: #000000;
   border-radius: 10px;
 }
 
-.crossing .slide-down  {
+.crossing .ellipse {
   width: 49px;
   height: 49px;
-  background: #D9D9D9;
+  background-color: #5b5b5b3c;
   border: 1px solid #000000;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.crossing .ellipse .fa-arrow-down {
+  font-size: 32px;
+  color: #000000;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  -webkit-animation: scroll 2s linear infinite;
+          animation: scroll 2s linear infinite;
+}
+
+@-webkit-keyframes scroll {
+  100% {
+    -webkit-transform: translateY(-13px);
+            transform: translateY(-13px);
+  }
+  0% {
+    -webkit-transform: translateY(13px);
+            transform: translateY(13px);
+  }
+}
+
+@keyframes scroll {
+  100% {
+    -webkit-transform: translateY(-13px);
+            transform: translateY(-13px);
+  }
+  0% {
+    -webkit-transform: translateY(13px);
+            transform: translateY(13px);
+  }
+}
+
+.gray {
+  height: 700px;
+  max-width: 100%;
+  background-color: #5B5B5B;
+}
+
+.gray h2 {
+  padding-top: 23px;
+  padding-bottom: 27px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 54px;
+  text-align: center;
+}
+
+.gray .skill__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.gray .language p {
+  margin-bottom: 25px;
+}
+
+.gray .language .progress-bar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  outline: 1px solid rgba(209, 197, 252, 0.5);
+  outline-offset: -1px;
+  -webkit-box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+          box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.gray .language .progress-bar::after, .gray .language .progress-bar .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.gray .language .progress-bar .lang {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: 'Poppins';
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.gray .language .progress-bar::after {
+  content: '';
+  width: 110px;
+  height: 110px;
+  border-radius: inherit;
+  outline: inherit;
+  -webkit-box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0 white, -0.5px -0.5px 0 rgba(0, 0, 0, 0.15), 0 12px 10px -10px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0 white, -0.5px -0.5px 0 rgba(0, 0, 0, 0.15), 0 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+.gray .language .progress-bar .number {
+  font-family: 'Poppins';
+  font-size: 21px;
+  font-weight: normal;
+}
+
+.gray .language .progress-bar circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 20px;
+  stroke-dasharray: 410;
+  stroke-dashoffset: 410;
+  -webkit-animation: var(--anim);
+          animation: var(--anim);
+}
+
+@-webkit-keyframes bar-fill {
+  100% {
+    stroke-dashoffset: var(--offset);
+  }
+}
+
+@keyframes bar-fill {
+  100% {
+    stroke-dashoffset: var(--offset);
+  }
+}
+
+.gray .language .progress-bar:not(:last-child) {
+  margin-bottom: 30px;
 }
